@@ -25,7 +25,9 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                        <span>Copyright &copy; <strong>Jasa Marga IoT Laboratory</strong> 2022. All Right Reserved</span>
+                        <br>
+                        <span>Developed by PMMB Batch 1 2022</span>
                     </div>
                 </div>
             </footer>
