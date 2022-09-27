@@ -89,7 +89,7 @@
                                 <label class="control-label">Select Inventory</label>
                                 <select name="inventory_id" class="form-control form-control-user selectpicker" title="Choose Inventory from the List" data-live-search="true" required>
                                     @foreach ($inventory as $row)
-                                        <option value="{{ $row->id }}" title="{{ $row->inventory_name }} | {{ $row->room }}">{{ $row->inventory_name }} | {{ $row->room }}</option>
+                                        <option value="{{ $row->id }}" title="{{ $row->inventory_name }} | {{ $row->room }}">{{ $row->inventory_name }} | {{ $row->inventory_code }} | {{ $row->room }}</option>
                                     @endforeach
                                 </select>
                             </div>

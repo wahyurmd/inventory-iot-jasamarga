@@ -158,11 +158,20 @@
     } );
 </script>
 
-<!-- call datatable for Dashboard Log Delete-->
+<!-- call datatable for Dashboard Log Delete -->
 <script>
     $(document).ready(function() {
         $('#logdelete').DataTable({
             order: [[4, 'desc']]
+        });
+    } );
+</script>
+
+<!-- call datatable for Dashboard Log Borrow -->
+<script>
+    $(document).ready(function() {
+        $('#logborrow').DataTable({
+            order: [[5, 'desc']]
         });
     } );
 </script>

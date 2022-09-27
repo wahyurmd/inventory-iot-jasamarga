@@ -119,11 +119,6 @@
                                             <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
                                         </div>
 
-                                        {{-- <label for="remember_me" class="flex items-center">
-                                            <x-jet-checkbox id="remember_me" name="remember" />
-                                            <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                                        </label> --}}
-
                                         <x-jet-button class="btn btn-primary btn-block mt-4">
                                             {{ __('Log in') }}
                                         </x-jet-button>

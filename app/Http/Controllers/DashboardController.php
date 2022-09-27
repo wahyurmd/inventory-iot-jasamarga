@@ -32,6 +32,12 @@ class DashboardController extends Controller {
         ->join( 'users', 'log_delete.user_id', '=', 'users.id' )
         ->select( 'log_delete.*', 'inventory.inventory_code', 'inventory.inventory_name', 'room.room', 'users.name' )
         ->get();
+        $borrow = Borrow::join( 'users', 'users.id', '=', 'borrow.user_id' )
+        ->join( 'inventory', 'borrow.inventory_id', '=', 'inventory.id' )
+        ->join( 'room', 'room.id', '=', 'inventory.room_id' )
+        ->select( 'borrow.*', 'inventory.inventory_code', 'inventory.inventory_name', 'inventory.inventory_picture', 'room.room', 'room.location', 'users.name' )
+        ->where( 'borrow.status', '1' )
+        ->get();
 
         $result = DB::select( DB::raw( 'select count(inventory_name) as inventory_name, room.room from inventory LEFT JOIN room ON room.id = inventory.room_id WHERE inventory.status=1 GROUP BY room.room' ) );
 
@@ -51,6 +57,7 @@ class DashboardController extends Controller {
             'logtransfer',
             'logdelete',
             'chartData',
+            'borrow',
         ] ) );
     }
 

@@ -157,6 +157,49 @@
 
     <!-- Content Row -->
     <div class="row">
+        <!-- Log Peminjaman Inventory -->
+        <div class="col-lg-12 mb-4">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Log Borrowing Inventory</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered display nowrap" id="logborrow" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Borrower Name</th>
+                                    <th>Borrower Number Phone</th>
+                                    <th>Inventory Code</th>
+                                    <th>Inventory Name</th>
+                                    <th>Admin</th>
+                                    <th>Borrow Date</th>
+                                    <th>Date Return</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($borrow as $log)
+                                <tr>
+                                    <td>{{ $log->borrower_name }}</td>
+                                    <td>{{ $log->borrower_number }}</td>
+                                    <td>{{ $log->inventory_code }}</td>
+                                    <td>{{ $log->inventory_name }}</td>
+                                    <td>{{ $log->name }}</td>
+                                    <td>{{ $log->borrow_date }}</td>
+                                    <td>{{ $log->date_return }}</td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Content Row -->
+    <div class="row">
 
         <!-- Inventory Summary -->
         <div class="col-xl-8 col-lg-7">

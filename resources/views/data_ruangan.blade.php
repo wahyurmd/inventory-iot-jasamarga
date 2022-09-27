@@ -98,7 +98,6 @@
                     @csrf
                     <div class="modal-body">
                         <div class="col-sm-12">
-                            <label class="control-label">{{ $row->id }}</label>
                             <label class="control-label">Room Name</label>
                             <input type="text" class="form-control form-control-user" name="room" autocomplete="off" value="{{ $row->room }}" required>
                         </div>
