@@ -136,7 +136,7 @@
                     @csrf
                     <div class="modal-body">
                         Select "Delete" below if you are sure.
-                        <input type="text" name="id" value="{{ $row->id }}">
+                        <input type="hidden" name="id" value="{{ $row->id }}">
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>

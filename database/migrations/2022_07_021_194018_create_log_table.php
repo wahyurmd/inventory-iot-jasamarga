@@ -12,6 +12,7 @@ class CreateLogTable extends Migration{
             $table->string('previous_room');
             $table->string('transfer_room');
             $table->unsignedBigInteger('user_id');
+            $table->integer('status');
             $table->timestamps();
             
             $table->foreign('user_id')->references('id')->on('users');
